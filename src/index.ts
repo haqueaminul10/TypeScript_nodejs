@@ -1,14 +1,14 @@
-import express, { Request, Response } from 'express';
+import express, { type Request, type Response } from 'express';
 
 const app = express();
-const PORT = 3000;
+const PORT = 5000;
 
 // Middleware to parse JSON
 app.use(express.json());
 
 // Routes
 app.get('/', (req: Request, res: Response) => {
-  res.send('Hello from Express + TypeScript!');
+  res.send('Hello worlds + TypeScript!');
 });
 
 app.get('/api/users', (req: Request, res: Response) => {
