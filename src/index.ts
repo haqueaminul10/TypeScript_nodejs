@@ -1,5 +1,7 @@
 import express, { type Request, type Response } from 'express';
 import './config/database.js';
+import './features/users/user-model.js';
+import userRouter from './features/users/user-route.js';
 
 const app = express();
 const PORT = 5000;
@@ -11,6 +13,11 @@ app.use(express.json());
 app.get('/', (req: Request, res: Response) => {
   res.send('Hello world + TypeScript!');
 });
+
+//db table
+
+// User routes
+app.use('/users', userRouter);
 
 // Start server
 app.listen(PORT, () => {
