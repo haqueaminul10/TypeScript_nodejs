@@ -1,4 +1,5 @@
 import express, { type Request, type Response } from 'express';
+import './config/database.js';
 
 const app = express();
 const PORT = 5000;
@@ -8,14 +9,7 @@ app.use(express.json());
 
 // Routes
 app.get('/', (req: Request, res: Response) => {
-  res.send('Hello worlds + TypeScript!');
-});
-
-app.get('/api/users', (req: Request, res: Response) => {
-  res.json([
-    { id: 1, name: 'John' },
-    { id: 2, name: 'Jane' },
-  ]);
+  res.send('Hello world + TypeScript!');
 });
 
 // Start server
