@@ -1,7 +1,7 @@
 import express, { type Request, type Response } from 'express';
-import './config/database.js';
-import './features/users/user-model.js';
-import userRouter from './features/users/user-route.js';
+import './config/database.ts';
+import './features/users/user-model.ts';
+import userRouter from './features/users/user-route.ts';
 
 const app = express();
 const PORT = 5000;
